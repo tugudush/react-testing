@@ -1,22 +1,15 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-// test("App contains correct heading", () => {
-//   render(<App />);
-//   const headingElement = screen.getByText(/learn React/i);
-//   expect(headingElement).toBeInTheDocument();
-// });
-
-test("App contains correct heading", () => {
+test("button starts with correct color", () => {
   render(<App />);
-  const headingElement = screen.getByRole("heading", { name: /learn React/i });
-  expect(headingElement).toBeInTheDocument();
+  screen.getByRole("button");
+  const buttonElement = screen.getByRole("button", { name: /blue/i });
+  expect(buttonElement).toHaveClass("red");
 });
 
-// test("empty test", () => {
+test("button starts with correct text", () => {});
 
-// })
+test("button has correct color after click", () => {});
 
-// test("test throws error explicitly", () => {
-//   throw new Error("fails this test!");
-// });
+test("button has correct text after click", () => {});
