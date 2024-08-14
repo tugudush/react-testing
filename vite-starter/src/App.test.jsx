@@ -17,4 +17,10 @@ test("button click flow", () => {
 
   // check button text
   expect(buttonElement).toHaveTextContent(/red/i);
+
+  // check the button color
+  expect(buttonElement).toHaveClass("blue");
+  // expect(buttonElement).toHaveStyle({
+  //   "background-color": "rgb(0, 0, 255)",
+  // });
 });
