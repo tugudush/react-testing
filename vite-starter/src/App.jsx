@@ -1,10 +1,16 @@
 import { useState } from "react";
+import { kebabCaseToTitleCase } from "./helpers";
 import "./App.css";
 
 function App() {
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [buttonColor, setButtonColor] = useState("medium-violet-red");
   const [previousColor, setPreviousColor] = useState(buttonColor);
+
+  const nextColorClass =
+    buttonColor === "medium-violet-red" ? "midnight-blue" : "medium-violet-red";
+
+  const nextColorTitleCase = kebabCaseToTitleCase(nextColorClass);
 
   function handleButtonClick() {
     setButtonColor((prevColor) =>
@@ -29,7 +35,7 @@ function App() {
         onClick={handleButtonClick}
         disabled={isButtonDisabled}
       >
-        Change to {buttonColor === "medium-violet-red" ? "blue" : "red"}
+        Change to {nextColorTitleCase}
       </button>
       <br />
       <input
