@@ -55,10 +55,9 @@ test("Code Quiz! Confirm Button Disable on Checkbox Check", () => {
   // checkbox click 2x (disable and re-enable)
   fireEvent.click(checkboxElement);
   expect(buttonElement).toBeDisabled();
+  expect(buttonElement).toHaveClass("gray");
 
   fireEvent.click(checkboxElement);
   expect(buttonElement).toBeEnabled();
-
-  // Assertions on button
-
+  expect(buttonElement).not.toHaveClass("gray");
 });
