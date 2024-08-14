@@ -52,4 +52,8 @@ test("Code Quiz! Confirm Button Disable on Checkbox Check", () => {
   expect(buttonElement).toBeEnabled();
   expect(checkboxElement).not.toBeChecked();
 
+  // checkbox click 2x (disable and re-enable)
+
+  // Assertions on button
+
 });
