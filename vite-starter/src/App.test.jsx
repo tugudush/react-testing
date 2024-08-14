@@ -6,7 +6,7 @@ test("button click flow", () => {
   render(<App />);
 
   // find the button
-  screen.getByRole("button");
+  //screen.getByRole("button");
   const buttonElement = screen.getByRole("button", { name: /blue/i });
 
   // check initial color
