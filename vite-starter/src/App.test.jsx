@@ -38,3 +38,22 @@ test("checkbox flow", () => {
   expect(buttonElement).toBeEnabled();
   expect(checkboxElement).not.toBeChecked();
 });
+
+test("Code Quiz! Confirm Button Disable on Checkbox Check", () => {
+  render(<App />);
+
+  // find elements
+  const buttonElement = screen.getByRole("button", { name: /blue/i });
+  const checkboxElement = screen.getByRole("checkbox", {
+    name: /disable button/i,
+  });
+
+  // check initial conditions
+  expect(buttonElement).toBeEnabled();
+  expect(checkboxElement).not.toBeChecked();
+
+  // checkbox click 2x (disable and re-enable)
+
+  // Assertions on button
+
+});
