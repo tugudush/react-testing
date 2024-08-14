@@ -2,12 +2,14 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [buttonColor, setButtonColor] = useState("red");
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+  const [buttonColor, setButtonColor] = useState("medium-violet-red");
   const [previousColor, setPreviousColor] = useState(buttonColor);
 
   function handleButtonClick() {
-    setButtonColor((prevColor) => (prevColor === "red" ? "blue" : "red"));
+    setButtonColor((prevColor) =>
+      prevColor === "medium-violet-red" ? "midnight-blue" : "medium-violet-red"
+    );
   }
 
   function handleCheckboxChange(event) {
@@ -27,7 +29,7 @@ function App() {
         onClick={handleButtonClick}
         disabled={isButtonDisabled}
       >
-        Change to {buttonColor === "red" ? "blue" : "red"}
+        Change to {buttonColor === "medium-violet-red" ? "blue" : "red"}
       </button>
       <br />
       <input
