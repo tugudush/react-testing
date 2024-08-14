@@ -4,12 +4,19 @@ import "./App.css";
 function App() {
   const [buttonColor, setButtonColor] = useState("red");
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+  const [previousColor, setPreviousColor] = useState(buttonColor);
 
   function handleButtonClick() {
     setButtonColor((prevColor) => (prevColor === "red" ? "blue" : "red"));
   }
 
   function handleCheckboxChange(event) {
+    if (event.target.checked) {
+      setPreviousColor(buttonColor);
+      setButtonColor("gray");
+    } else {
+      setButtonColor(previousColor);
+    }
     setIsButtonDisabled(event.target.checked);
   }
 
