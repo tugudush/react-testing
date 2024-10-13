@@ -1,4 +1,5 @@
 import SummaryForm from "./pages/summary/SummaryForm";
+import Options from "./pages/entry/Options";
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <h1>Sundaes on Demand</h1>
 
       <SummaryForm />
+      <Options optionType="scoops" />
     </div>
   );
 }
