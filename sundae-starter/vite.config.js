@@ -13,6 +13,12 @@ export default defineConfig({
     // tests that rely on CSS -- and parsing CSS is slow.
     // I'm leaving it in here becasue often people want to parse CSS in tests.
     css: true,
+    coverage: {
+      provider: "v8",
+      enabled: true,
+      reporter: ["text", "lcov"],
+      reportOnFailure: true,
+    },
   },
   server: {
     // to match sundae server expectation
